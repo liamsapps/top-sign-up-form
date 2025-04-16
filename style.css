@@ -1,0 +1,109 @@
+/* General Settings */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /* width: 100%;
+    height: 100%; */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+}
+
+.container > div {
+    border: 1px solid black;
+}
+
+/* .container > .left { */
+.left {
+    flex: 1;
+}
+
+/* .container > .right { */
+.right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .container > .right > .child { */
+.right > .child {
+    flex: 1;
+    border: 1px solid black;
+}
+
+/* .container > .right > .child.middle { */
+.right > .child.middle {
+    /* flex: 1.60; */
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.right > .child.middle > .section-heading {
+    flex: 1;
+    border: 1px solid black;
+}
+
+.right > .child.middle > .inputs {
+    flex: 10;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    flex: 1;
+    display: flex;
+}
+
+/* does nothing */
+/* form {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+} */
+
+/* .inputs > form > .inner-inputs1 { */
+.inputs .inner-inputs1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+}
+
+/* .inputs > form > .inner-inputs2 { */
+.inputs .inner-inputs2 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+}
+
+/* combine .inner-inputs{1,2} */
+
+
+
+/* add divs around input elements */
+
+
+
+
+/* works without form */
+/* .right > .child.middle > div { */
+/* .right > .child.middle ~ div {
+    flex: 1;
+    border: 1px solid black;
+} */

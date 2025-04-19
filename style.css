@@ -1,3 +1,49 @@
+/* FONTS */
+@font-face {
+    font-family: 'Norse';
+    src: url('../fonts/Norse-Bold.woff2') format('woff2'),
+        url('../fonts/Norse-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
+        url('../fonts/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Serif 20pt';
+    src: url('../fonts/RobotoSerif-20ptRegular.woff2') format('woff2'),
+        url('../fonts/RobotoSerif-20ptRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Serif 20pt';
+    src: url('../fonts/RobotoSerif-20ptItalic.woff2') format('woff2'),
+        url('../fonts/RobotoSerif-20ptItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* General Settings */
 * {
     padding: 0px;
@@ -5,101 +51,222 @@
     box-sizing: border-box;
 }
 
-body {
-    /* width: 100%;
-    height: 100%; */
-    width: 100vw;
-    height: 100vh;
+body {    
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.2rem;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    height: 100%;
 }
 
 /* Layout */
 .container {
     width: 100%;
-    height: 100%;
-    border: 1px solid red;
+    height: 100%;    
     display: flex;
 }
 
-.container > div {
-    border: 1px solid black;
-}
-
-/* .container > .left { */
+/* LEFT SIDE - background image, logo and credit for using image */
 .left {
-    flex: 1;
+    flex: 1;    
+    width: 100%;
+    position: relative;    
 }
 
-/* .container > .right { */
+.left > img {    
+    width: 100%;
+    height: 100%;    
+    z-index: -1;    
+}
+
+.logo {
+    height: 17%;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    background: rgba(0, 0, 0, 0.5);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo > img {
+    width: 4rem;
+}
+
+.logo > span {
+    color: white;
+    font-family: 'Norse';
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.left > .credit {
+    position: absolute;
+    bottom: 2%;
+    left: 25%;
+    color: white;
+    font-size: 0.5rem;
+    font-weight: 200;   
+}
+
+.left > .credit > span > a {
+    color: white;
+}
+
+/* Layout - RIGHT SIDE - input elements */
 .right {
     flex: 2;
     display: flex;
     flex-direction: column;
 }
 
-/* .container > .right > .child { */
 .right > .child {
-    flex: 1;
-    border: 1px solid black;
+    flex: 1;    
+    margin-left: 2rem;
 }
 
-/* .container > .right > .child.middle { */
+.right > .child.top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+}
 .right > .child.middle {
-    /* flex: 1.60; */
-    flex: 2;
+    flex: 1;    
     display: flex;
     flex-direction: column;
 }
 
 .right > .child.middle > .section-heading {
-    flex: 1;
-    border: 1px solid black;
+    flex: 1;    
 }
 
 .right > .child.middle > .inputs {
     flex: 10;
-    border: 1px solid black;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
 }
 
 form {
     flex: 1;
-    display: flex;
+    display: flex;        
 }
 
-/* does nothing */
-/* form {
-    padding: 0px;
-    margin: 0px;
-    border: none;
-} */
-
-/* .inputs > form > .inner-inputs1 { */
-.inputs .inner-inputs1 {
+.inputs .inner-inputs1, .inner-inputs2 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border: 1px solid black;
+    gap: 1rem;
 }
 
-/* .inputs > form > .inner-inputs2 { */
+.inputs .inner-inputs1 {
+    flex: 0.8;
+}
 .inputs .inner-inputs2 {
     flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 1px solid black;
 }
 
-/* combine .inner-inputs{1,2} */
+.right > .bottom-top-border {
+    width: 100%;
+    /* WORKS, but solid color */
+    /* border-top: 4px solid rgb(216, 211, 211); */
+    /* WORKS and with slight gradient */
+    height: 0.3rem;
+    background: linear-gradient(180deg, #CBCED4, #E5E7EB);
+    
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.right > .child.bottom {    
+    flex: 1;
+    display: flex;
+    flex-direction: column;    
+    gap: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: bold;    
+}
+
+/* Text Styling */
+.right > .child.top > p {
+    max-inline-size: 50ch;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.right > .child.top > p > span {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.section-heading > h3 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
 
 
+/* Inputs */
+label, input, button {
+    appearance: none;
+}
 
-/* add divs around input elements */
+label {
+    display: block;
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+    /* letter-spacing: 0.1rem; */
+}
 
+input {
+    font-family: inherit;    
+    font-size: 0.9rem;
+    width: 12rem;
+    height: 1.8rem;
 
+    border: 1px solid #E5E7EB; 
+    border-radius: 0.3rem;
+    
+    padding-left: 0.3rem;
+}
 
+input:focus {
+    outline: none;
+    border: 1px solid rgb(87, 87, 226);
+    box-shadow: 0px 1px 3px 1px rgb(87, 87, 226);
+}
+
+input[id*="password"]:invalid {
+    border: 1px solid red;
+    /* box-shadow: 1px 1px 1px 1px red; */
+}
+
+input[id*="password"]:valid {
+    border: 1px solid green;
+    /* box-shadow: 1px 1px 1px 1px green; */
+}
+
+input[placeholder] {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    border-radius: 0.3rem;
+    padding: 0.5rem 2rem;
+    /* padding: 8px 30px; */
+    font-weight: 900;
+}
+
+.right > .child.bottom > div > p > a {
+    color: #596D48;
+    text-decoration: none;
+}
 
 /* works without form */
 /* .right > .child.middle > div { */

@@ -1,8 +1,8 @@
 /* FONTS */
 @font-face {
     font-family: 'Norse';
-    src: url('../fonts/Norse-Bold.woff2') format('woff2'),
-        url('../fonts/Norse-Bold.woff') format('woff');
+    src: url('./fonts/Norse-Bold.woff2') format('woff2'),
+        url('./fonts/Norse-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -10,8 +10,8 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-        url('../fonts/Roboto-Regular.woff') format('woff');
+    src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+        url('./fonts/Roboto-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -19,8 +19,8 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
-        url('../fonts/Roboto-Italic.woff') format('woff');
+    src: url('./fonts/Roboto-Italic.woff2') format('woff2'),
+        url('./fonts/Roboto-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -28,8 +28,8 @@
 
 @font-face {
     font-family: 'Roboto Serif 20pt';
-    src: url('../fonts/RobotoSerif-20ptRegular.woff2') format('woff2'),
-        url('../fonts/RobotoSerif-20ptRegular.woff') format('woff');
+    src: url('./fonts/RobotoSerif-20ptRegular.woff2') format('woff2'),
+        url('./fonts/RobotoSerif-20ptRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -37,8 +37,8 @@
 
 @font-face {
     font-family: 'Roboto Serif 20pt';
-    src: url('../fonts/RobotoSerif-20ptItalic.woff2') format('woff2'),
-        url('../fonts/RobotoSerif-20ptItalic.woff') format('woff');
+    src: url('./fonts/RobotoSerif-20ptItalic.woff2') format('woff2'),
+        url('./fonts/RobotoSerif-20ptItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;

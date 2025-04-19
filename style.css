@@ -204,6 +204,9 @@ form {
 }
 
 .section-heading > h3 {
+/* .section-heading > p { */
+    /* font-size: 0.9rem;
+    font-weight: 700; */
     font-weight: 500;
     margin-bottom: 1rem;
 }
@@ -268,9 +271,3 @@ button {
     text-decoration: none;
 }
 
-/* works without form */
-/* .right > .child.middle > div { */
-/* .right > .child.middle ~ div {
-    flex: 1;
-    border: 1px solid black;
-} */
